@@ -1,0 +1,39 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.project__header h1 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.project__authors,
+.project__venue {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.project__links {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.project__hero {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.bibtex {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 13px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
