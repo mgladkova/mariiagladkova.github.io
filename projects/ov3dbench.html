@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OV3D-Bench — Mariia Gladkova</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/project.css" />
+  </head>
+  <body>
+    <div class="page project">
+      <a class="back-link" href="../index.html#projects">&larr; Back to projects</a>
+
+      <header class="project__header">
+        <h1>OV3D-Bench: A Diagnostic Benchmark for Open-Vocabulary Monocular 3D Detection</h1>
+        <p class="project__authors">
+          <strong>Mariia Gladkova</strong>, Neehar Peri, Ishan Khatri, Deva Ramanan, Daniel Cremers
+        </p>
+        <p class="project__venue">ECCV 2026 Workshop &mdash; OpenSUN3D</p>
+        <p class="project__links">
+          <!-- TODO: add links once available (paper PDF, code, dataset) -->
+          Paper &middot; Code &middot; Dataset (coming soon)
+        </p>
+      </header>
+
+      <section class="section">
+        <img class="project__hero" src="../static/img/ov3dbench-teaser.png" alt="OV3D-Bench teaser figure" />
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Abstract</h2>
+        <p>
+          Despite recent progress in 3D visual understanding, evaluating open-vocabulary monocular 3D object
+          detectors remains a significant challenge. Existing methods report strong in-domain performance, but each
+          evaluates under a different protocol, several rely on per-image category oracles unavailable at
+          deployment, and all collapse geometry and semantics into a single AP metric. To address these limitations,
+          we introduce OV3D-Bench, a diagnostic benchmark that compares open-vocabulary monocular 3D detectors under
+          deployment-realistic conditions across seven indoor and outdoor datasets. Our benchmark replaces per-image
+          oracles with standardized dataset-level prompts and decouples detection accuracy along three axes:
+          localization, semantic robustness, and cross-domain transfer. We evaluate seven representative detectors
+          and find that (i) they localize well (mean TP 3D IoU 0.6) yet often mislabel a correctly localized box with
+          a semantically adjacent category, e.g. all five detectors correctly localize the same outdoor vehicle but
+          call it <em>truck</em> or <em>large_vehicle</em> instead of <em>regular_vehicle</em>; (ii) accuracy is
+          highly sensitive to prompt phrasing, collapsing DetAny3D from 8.3 to 0.1 AP3D, while our remapping-based
+          baseline shifts by at most 1.7; and (iii) the widely adopted target-aware protocol hides these errors,
+          inflating DetAny3D's mAP3D 2.3&times; on the 196-category ScanNet-200 versus only 1.1&times; on the
+          15-category ARKitScenes. Lastly, we demonstrate that simply remapping a frozen closed-vocabulary
+          detector's predictions with a contrastive vision-language encoder like SigLIPv2 performs competitively with
+          recent open-vocabulary methods like DetAny3D. This indicates that geometric localization is largely mature
+          while open-vocabulary semantics remains the primary bottleneck. We will release OV3D-Bench as a unified,
+          deployment-ready benchmark.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Citation</h2>
+        <pre class="bibtex">
+@inproceedings{gladkova2026ov3dbench,
+  title     = {{OV3D-Bench}: A Diagnostic Benchmark for Open-Vocabulary Monocular 3D Detection},
+  author    = {Gladkova, Mariia and Peri, Neehar and Khatri, Ishan and Ramanan, Deva and Cremers, Daniel},
+  booktitle = {ECCV Workshop on Open-Vocabulary 3D Scene Understanding (OpenSUN3D)},
+  year      = {2026}
+}</pre
+        >
+      </section>
+    </div>
+  </body>
+</html>
