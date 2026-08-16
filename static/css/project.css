@@ -37,3 +37,64 @@
   overflow-x: auto;
   white-space: pre-wrap;
 }
+
+.figure {
+  margin: 0;
+}
+
+.figure img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.figure__caption {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.figure__caption strong {
+  color: var(--text);
+}
+
+.figure--narrow {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.section__lead {
+  margin: -8px 0 20px;
+  max-width: 68ch;
+}
+
+.contributions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contributions li {
+  padding-left: 32px;
+  position: relative;
+  font-size: 15px;
+}
+
+.contributions li::before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+.contributions {
+  counter-reset: item;
+}
