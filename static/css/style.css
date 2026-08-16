@@ -273,6 +273,12 @@ a:focus {
   color: var(--muted);
 }
 
+.pub__desc {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
 .pub__links {
   margin: 8px 0 0;
   font-size: 14px;
